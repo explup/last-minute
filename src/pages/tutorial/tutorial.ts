@@ -28,6 +28,7 @@ export class TutorialPage {
       "TUTORIAL_SLIDE2_DESCRIPTION",
       "TUTORIAL_SLIDE3_TITLE",
       "TUTORIAL_SLIDE3_DESCRIPTION",
+      "TUTORIAL_SLIDE4_TITLE",
     ]).subscribe(
       (values) => {
         console.log('Loaded values', values);
@@ -35,17 +36,22 @@ export class TutorialPage {
           {
             title: values.TUTORIAL_SLIDE1_TITLE,
             description: values.TUTORIAL_SLIDE1_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-1.png',
+            image: 'assets/img/vacation-slidebox-img-1.jpg',
           },
           {
             title: values.TUTORIAL_SLIDE2_TITLE,
             description: values.TUTORIAL_SLIDE2_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-2.png',
+            image: 'assets/img/vacation-slidebox-img-2.jpg',
           },
           {
             title: values.TUTORIAL_SLIDE3_TITLE,
             description: values.TUTORIAL_SLIDE3_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-3.png',
+            image: 'assets/img/vacation-slidebox-img-3.jpg',
+          },
+          {
+            title: values.TUTORIAL_SLIDE3_TITLE,
+            description: values.TUTORIAL_SLIDE3_DESCRIPTION,
+            image: 'assets/img/vacation-slidebox-img-4.jpg',
           }
         ];
       });
