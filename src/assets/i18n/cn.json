@@ -8,16 +8,17 @@
     "LOGIN": "登录",
     "SIGNUP": "注册",
   
-    "TAB1_TITLE": "Items",
-    "TAB2_TITLE": "搜索",
-    "TAB3_TITLE": "设置",
+    "TAB_VACATION_TITLE": "旅游",
+    "TAB_SEARCH_TITLE": "搜索",
+    "TAB_RECOMMEND_TITLE": "推荐",
+    "TAB_PROFILE_TITLE": "我的",
   
     "MAP_TITLE": "地图",
   
     "TUTORIAL_SKIP_BUTTON" : "跳过",
     "TUTORIAL_CONTINUE_BUTTON" : "继续",
   
-    "TUTORIAL_SLIDE1_TITLE": "说走就走的旅行",
+    "TUTORIAL_SLIDE1_TITLE": "旅行并不奢侈，只要迈出第一步",
     "TUTORIAL_SLIDE1_DESCRIPTION": "The <b>Ionic Super Starter</b> is a fully-featured Ionic starter with many pre-built pages and best practices.",
   
     "TUTORIAL_SLIDE2_TITLE": "身体和心灵总有一个在路上",
@@ -49,7 +50,7 @@
     "SIGNUP_ERROR": "不能创建用户。请检查信息并在此尝试",
     "SIGNUP_BUTTON": "注册",
   
-    "LIST_MASTER_TITLE": "Items",
+    "LIST_MASTER_TITLE": "旅行",
   
     "ITEM_CREATE_TITLE": "新建 item",
     "ITEM_CREATE_CHOOSE_IMAGE": "添加 图片",
@@ -64,6 +65,6 @@
     "CARDS_TITLE": "社交",
   
     "SEARCH_TITLE": "搜索",
-    "SEARCH_PLACEHOLDER" : "搜索 比如 \"Donald Duck\""
+    "SEARCH_PLACEHOLDER" : "搜索 比如 \"美国\""
   }
   

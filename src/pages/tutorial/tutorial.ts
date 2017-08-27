@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { MenuController, NavController } from 'ionic-angular';
-
-import { WelcomePage } from '../welcome/welcome';
-
+import { MainPage } from '../../pages/pages';
+import { LoginPage } from '../login/login';
 import { TranslateService } from '@ngx-translate/core';
 
 
@@ -29,6 +28,7 @@ export class TutorialPage {
       "TUTORIAL_SLIDE3_TITLE",
       "TUTORIAL_SLIDE3_DESCRIPTION",
       "TUTORIAL_SLIDE4_TITLE",
+      "LOGIN",
     ]).subscribe(
       (values) => {
         console.log('Loaded values', values);
@@ -49,7 +49,7 @@ export class TutorialPage {
             image: 'assets/img/vacation-slidebox-img-3.jpg',
           },
           {
-            title: values.TUTORIAL_SLIDE3_TITLE,
+            title: values.TUTORIAL_SLIDE4_TITLE,
             description: values.TUTORIAL_SLIDE3_DESCRIPTION,
             image: 'assets/img/vacation-slidebox-img-4.jpg',
           }
@@ -57,13 +57,13 @@ export class TutorialPage {
       });
   }
 
-  startApp() {
-    this.navCtrl.setRoot(WelcomePage, {}, {
-      animate: true,
-      direction: 'forward'
-    });
-  }
 
+  gotoLoginPage(){
+    this.navCtrl.push(LoginPage);
+  }
+  gotoMainPage(){
+    this.navCtrl.push(MainPage);
+  }
   onSlideChangeStart(slider) {
     this.showSkip = !slider.isEnd();
   }

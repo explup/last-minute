@@ -2,28 +2,30 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { TranslateService } from '@ngx-translate/core';
 
-import { Tab1Root } from '../pages';
-import { Tab2Root } from '../pages';
-import { Tab3Root } from '../pages';
+import { TabListMasterPage } from '../pages';
+import { TabSearchPage } from '../pages';
+import { TabSettingPage } from '../pages';
 
 @Component({
   selector: 'page-tabs',
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
-  tab1Root: any = Tab1Root;
-  tab2Root: any = Tab2Root;
-  tab3Root: any = Tab3Root;
+  tabListMasterPageRoot: any = TabListMasterPage;
+  tabSearchPageRoot: any = TabSearchPage;
+  tabSettingPageRoot: any = TabSettingPage;
 
-  tab1Title = " ";
-  tab2Title = " ";
-  tab3Title = " ";
+  tabVacationTitle = " ";
+  tabSearchTitle = " ";
+  tabRecommendTitle = " ";
+  tabProfileTitle = " ";
 
   constructor(public navCtrl: NavController, public translateService: TranslateService) {
-    translateService.get(['TAB1_TITLE', 'TAB2_TITLE', 'TAB3_TITLE']).subscribe(values => {
-      this.tab1Title = values['TAB1_TITLE'];
-      this.tab2Title = values['TAB2_TITLE'];
-      this.tab3Title = values['TAB3_TITLE'];
+    translateService.get(['TAB_VACATION_TITLE', 'TAB_SEARCH_TITLE', 'TAB_RECOMMEND_TITLE', 'TAB_PROFILE_TITLE']).subscribe(values => {
+      this.tabVacationTitle = values['TAB_VACATION_TITLE'];
+      this.tabSearchTitle = values['TAB_SEARCH_TITLE'];
+      this.tabRecommendTitle = values['TAB_RECOMMEND_TITLE'];
+      this.tabProfileTitle = values['TAB_PROFILE_TITLE'];
     });
   }
 }
