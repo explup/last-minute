@@ -1,6 +1,6 @@
 <ion-header>
 
-  <ion-navbar color="primary">
+    <ion-navbar color="secondary">
     <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
 
     <ion-buttons end>
@@ -29,25 +29,32 @@
         </ion-card-title>
        
       </ion-card-content>
-  
       <ion-row>
-        <ion-col col-3>
-          <button ion-button clear small color="dark" icon-start>
-            <ion-icon name='star'></ion-icon>
-            {{ 'TRAVEL_CARD_WATCH' | translate }}
-          </button>
-        </ion-col>       
-        <ion-col col-3>
-          <button ion-button clear small color="dark" icon-start>
-            <ion-icon name='share-alt'></ion-icon>
-            {{ 'TRAVEL_CARD_SHARE' | translate }}
-          </button>
-        </ion-col>
-
-        <ion-col text-right>
-        距离截止：<span class="leftDays">{{item.leftDays}}天</span> <span class="old-price">¥{{item.oldPrice}}</span> <span color="danger" class="new-price">¥{{item.newPrice}}</span>
-         </ion-col>
+          <ion-col col-2>
+              <button ion-fab color="danger"><ion-icon name="star" title="{{ 'TRAVEL_CARD_WATCH' | translate }}"></ion-icon></button>  
+            </ion-col>  
+              
+            <ion-col col-2>
+                <ion-fab>
+                    <button ion-fab color="secondary"><ion-icon name="md-share"></ion-icon></button>
+                    <ion-fab-list side="right">
+                      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+                      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+                      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+                      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+                    </ion-fab-list>
+                  </ion-fab>
+            </ion-col>    
+          <ion-col text-right>
+              <span class="old-price">¥{{item.oldPrice}}</span> <span color="danger" class="new-price">¥{{item.newPrice}}</span>
+          </ion-col>
+        </ion-row>
+      <ion-row>
+          <ion-col text-right>
+          {{ 'LEFT_DAYS' | translate }} :<span class="leftDays">{{item.leftDays}}</span> 
+          </ion-col>
       </ion-row>
+    
   
     </ion-card>        
 </ion-content>

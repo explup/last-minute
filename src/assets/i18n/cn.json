@@ -73,6 +73,7 @@
     "Earliest_Travel_Date":"最早出行",
     "Latest_Travel_Date":"最晚出行",
 
-    "Destination":"目的地"
+    "Destination":"目的地",
+    "LEFT_DAYS":"距离截至"
   }
   
