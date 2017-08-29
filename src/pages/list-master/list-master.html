@@ -43,11 +43,9 @@
             {{ 'TRAVEL_CARD_SHARE' | translate }}
           </button>
         </ion-col>
-        <ico-col>
-            <span class="leftDays">{{item.leftDays}}天</span>
-        </ico-col>
+
         <ion-col text-right>
-        <span class="old-price">¥{{item.oldPrice}}</span> <span color="danger" class="new-price">¥{{item.newPrice}}</span>
+        距离截止：<span class="leftDays">{{item.leftDays}}天</span> <span class="old-price">¥{{item.oldPrice}}</span> <span color="danger" class="new-price">¥{{item.newPrice}}</span>
          </ion-col>
       </ion-row>
   
