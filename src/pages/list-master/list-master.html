@@ -1,12 +1,18 @@
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
 
     <ion-buttons end>
-      <button ion-button icon-only (click)="addItem()">
-        <ion-icon name="add"></ion-icon>
-      </button>
+        <button ion-button icon-left>
+            <ion-icon name="arrow-round-down"></ion-icon>
+            价格排序
+          </button>
+          <button ion-button icon-left>
+              <ion-icon name="arrow-round-up"></ion-icon>
+              时间排序
+            </button>
+
     </ion-buttons>
   </ion-navbar>
 
@@ -21,25 +27,28 @@
         <ion-card-title>
             {{item.name}}
         </ion-card-title>
-        <p>
-            {{item.about}}
-        </p>
+       
       </ion-card-content>
   
-      <ion-row no-padding>
-        <ion-col>
-          <button ion-button clear small color="danger" icon-start>
+      <ion-row>
+        <ion-col col-3>
+          <button ion-button clear small color="dark" icon-start>
             <ion-icon name='star'></ion-icon>
             {{ 'TRAVEL_CARD_WATCH' | translate }}
           </button>
-        </ion-col>
-
-        <ion-col text-right>
-          <button ion-button clear small color="danger" icon-start>
+        </ion-col>       
+        <ion-col col-3>
+          <button ion-button clear small color="dark" icon-start>
             <ion-icon name='share-alt'></ion-icon>
             {{ 'TRAVEL_CARD_SHARE' | translate }}
           </button>
         </ion-col>
+        <ico-col>
+            <span class="leftDays">{{item.leftDays}}天</span>
+        </ico-col>
+        <ion-col text-right>
+        <span class="old-price">¥{{item.oldPrice}}</span> <span color="danger" class="new-price">¥{{item.newPrice}}</span>
+         </ion-col>
       </ion-row>
   
     </ion-card>        
