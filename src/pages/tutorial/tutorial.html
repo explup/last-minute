@@ -6,7 +6,7 @@
       <img [src]="slide.image" class="slide-image" />
       <div class="slide-overlay"></div>
       <h3 class="slide-title" [innerHTML]="slide.title"></h3>
-      <button ion-button large class="slide-btn-left" (click)="gotoMainPage()">随便看看</button>
+      <button ion-button large class="slide-btn-left" (click)="gotoMainPage()">{{ 'ANONYMOUSE_LOGIN' | translate }}</button>
       <button ion-button large class="slide-btn-right" (click)="gotoLoginPage()">
         {{ 'LOGIN' | translate }}
       </button>

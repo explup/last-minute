@@ -8,15 +8,24 @@
 
 
 <ion-content>
-  <ion-searchbar (ionInput)="getItems($event)" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
-  <ion-list>
-    <button ion-item (click)="openItem(item)" *ngFor="let item of currentItems">
-      <ion-avatar item-start>
-        <img [src]="item.profilePic" />
-      </ion-avatar>
-      <h2>{{item.name}}</h2>
-      <p>{{item.about}}</p>
-      <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
-    </button>
-  </ion-list>
+      <form (ngSubmit)="searchTravel()">
+          <ion-item>
+              <ion-label>{{ 'Destination' | translate }}</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+          
+            <ion-item>
+              <ion-label>{{ 'Earliest_Travel_Date' | translate }}</ion-label>
+              <ion-datetime displayFormat="MMM DD YYYY" cancelText ="取消" doneText="完成"></ion-datetime>
+            </ion-item>
+    
+            <ion-item>
+                <ion-label>{{ 'Latest_Travel_Date' | translate }}</ion-label>
+                <ion-datetime displayFormat="MMM DD YYYY" cancelText ="取消" doneText ="完成"></ion-datetime>
+              </ion-item>
+              <div padding>
+                  <button ion-button type="submit" block>{{ 'SEARCH_TITLE' | translate }}</button>
+             </div>
+        </form>
+    
 </ion-content>
