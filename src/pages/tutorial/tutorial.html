@@ -2,12 +2,12 @@
 
 <ion-content no-bounce>
   <ion-slides pager="true" (ionSlideWillChange)="onSlideChangeStart($event)">
-    <ion-slide *ngFor="let slide of slides" color="secondary">
+    <ion-slide *ngFor="let slide of slides" color="primary">
       <img [src]="slide.image" class="slide-image" />
       <div class="slide-overlay"></div>
       <h3 class="slide-title" [innerHTML]="slide.title"></h3>
-      <button ion-button large class="slide-btn-left" (click)="gotoMainPage()" color="secondary">{{ 'ANONYMOUSE_LOGIN' | translate }}</button>
-      <button ion-button large class="slide-btn-right" (click)="gotoLoginPage()" color="secondary">
+      <button ion-button large class="slide-btn-left" (click)="gotoMainPage()" color="primary">{{ 'ANONYMOUSE_LOGIN' | translate }}</button>
+      <button ion-button large class="slide-btn-right" (click)="gotoLoginPage()" color="primary">
         {{ 'LOGIN' | translate }}
       </button>
     </ion-slide>
